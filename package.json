@@ -1,0 +1,29 @@
+{
+  "name": "khokhlov-gpt-bot",
+  "version": "1.0.0",
+  "description": "ChatGPT bot",
+  "main": "src/main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/main.js",
+    "start": "node src/main.js"
+  },
+  "keywords": [
+    "ChatGPT",
+    "GPT",
+    "Telegram",
+    "Bot"
+  ],
+  "author": "Khokhlov Pavel",
+  "license": "ISC",
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "1.1.0",
+    "axios": "1.6.2",
+    "config": "3.3.9",
+    "fluent-ffmpeg": "2.1.2",
+    "node-telegram-bot-api": "0.64.0",
+    "nodemon": "3.0.1",
+    "openai": "4.17.4",
+    "telegraf": "4.15.0"
+  }
+}
