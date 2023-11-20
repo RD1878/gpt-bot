@@ -28,30 +28,6 @@ export async function initCommand(ctx) {
     ctx.session = INITIAL_SESSION
     await ctx.reply(checkAccess(userId));
 }
-// export async function processTextToChat(ctx, content) {
-//     try {
-//         ctx.session.messages.push({ role: openai.roles.USER, content });
-//
-//         const response = await openai.chat(ctx.session.messages);
-//
-//         let formattedContent = response.content;
-//
-//         // Замена блоков кода на HTML-форматирование
-//         formattedContent = formattedContent.replace(/```(.*?)```/gs, '<pre><code>$1</code></pre>');
-//
-//         // Замена инлайн-кода на HTML-форматирование
-//         formattedContent = formattedContent.replace(/`([^`]*)`/g, '<code>$1</code>');
-//
-//         ctx.session.messages.push({
-//             role: openai.roles.ASSISTANT,
-//             content: formattedContent,
-//         });
-//
-//         await ctx.reply(formattedContent, { parse_mode: 'HTML' });
-//     } catch (e) {
-//         console.log('Error while processing text to GPT', e.message);
-//     }
-// }
 
 export async function processTextToChat(ctx, content) {
     try {
